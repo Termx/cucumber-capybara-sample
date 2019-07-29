@@ -48,7 +48,7 @@ end
 Then(/^I should verify the UserID matches the current signin account$/) do
   expect(page).to have_css('#userid', text: project_website['user_id'])
   expect(page).to have_css('#city', text: 'Irvine')
-  expect(page).to have_css('#state', 'CA')
+  expect(page).to have_css('#state', text: 'CA')
 end
 
 Then(/^I should verify the info matches the current signin account$/) do
