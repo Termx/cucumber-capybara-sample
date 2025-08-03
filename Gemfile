@@ -1,0 +1,13 @@
+source 'http://rubygems.org'
+ruby '2.6.3'
+
+gem 'capybara'
+gem 'cucumber'
+gem 'gherkin'
+gem 'json'
+gem 'require_all'
+gem 'rspec'
+gem 'rubocop'
+gem 'selenium-webdriver'
+gem 'term-ansicolor'
+gem 'xpath'

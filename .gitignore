@@ -1,0 +1,4 @@
+chromedriver.log
+.DS_Store
+.test-reports/*
+.git

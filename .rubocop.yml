@@ -1,0 +1,168 @@
+require:
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  DisabledByDefault: false
+  TargetRubyVersion: 2.6
+  Exclude:
+      - 'vendor/**/*'
+      - 'gemfiles/vendor/**/*'
+
+#################### Lint ################################
+
+Metrics/LineLength:
+  Description: 'Limit lines to 80 characters.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#80-character-limits'
+  Exclude:
+    - 'spec/**/*'
+    - 'lib/capybara/spec/**/*'
+    - 'lib/capybara/selector.rb'
+  IgnoredPatterns:
+    - '\s+# _?rubocop'
+    - '^\s*#'
+    - '^\s*(raise|warn) '
+  Max: 120
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'lib/capybara/spec/**/*'
+    - 'capybara.gemspec'
+    - 'lib/capybara/selector/definition/*'
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ClassLength:
+  CountComments: false
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  CountComments: false
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+  CountComments: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/ParameterLists:
+   CountKeywordArgs: false
+
+Lint/UnusedMethodArgument:
+  Exclude:
+    - 'lib/capybara/driver/base.rb'
+    - 'lib/capybara/driver/node.rb'
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+
+Naming/RescuedExceptionsVariableName:
+  # This cop is currently fully broken
+  Enabled: false
+
+Naming/PredicateName:
+  Exclude:
+    - '**/*/*matchers.rb'
+
+Naming/UncommunicativeMethodParamName:
+  AllowedNames:
+    - 'el'
+    - 'id'
+    - 'c'
+    - 'x'
+    - 'y'
+    - 'on'
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Style/SingleLineMethods:
+  Enabled: false
+
+Style/Alias:
+  Enabled: false
+
+Style/Documentation:
+  Exclude:
+    - 'lib/capybara/spec/**/*'
+    - 'spec/**/*'
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/ClassVars:
+  Enabled: false
+
+Style/EmptyElse:
+  EnforcedStyle: empty
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/NumericLiterals:
+  Exclude:
+    - 'lib/capybara/spec/**/*'
+    - 'spec/**/*'
+
+Style/SpecialGlobalVars:
+  Exclude:
+    - 'capybara.gemspec'
+
+Layout/EmptyLineBetweenDefs:
+  AllowAdjacentOneLineDefs: true
+
+Layout/AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+Layout/CaseIndentation:
+  EnforcedStyle: end
+
+Layout/IndentFirstArrayElement:
+  EnforcedStyle: consistent
+
+Security/YAMLLoad:
+  Exclude:
+    - 'lib/capybara/spec/**/*'
+    - 'spec/**/*'
+
+RSpec/ExampleWording:
+  Enabled: false
+
+RSpec/InstanceVariable:
+  AssignmentOnly: true
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/DescribedClass:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Enabled: false
+
+RSpec/FilePath:
+  Enabled: false
+
+RSpec/PredicateMatcher:
+  Enabled: false
+
+Capybara/FeatureMethods:
+Enabled: false

@@ -1,0 +1,46 @@
+
+qa: &qa
+
+  domain: 'http://www.qa.project_site/login.html'
+  admin: 'http://admin.qa.project_site/login.html'
+
+###########
+#Login info
+###########
+
+  admin_password: 'AdMiNPa33w0rD'
+  user_email: 'useremail@testemail.com'
+  user_id: 'ValiD34'
+  invalid_userid: 'Valid34'
+  user_password: 'Us3rPa33w0rD'
+  invalid_user_password: 'Us3rPa33w0rd'
+
+#################
+#Alert messages
+#################
+
+  welcome_message: 'You have sucessfully logged in.'
+  invalid_userid_alert: 'The UserID is invalid!'
+  invalid_pw_alert: 'The password is invalid!'
+  invalid_userid_pw_alert: 'Both the UserID and Password are invalid!'
+  blank_userid_alert: 'Error! The UserID field was left blank.'
+  blank_name_alert: 'Error! The Name field was left blank.'
+  blank_password_alert: 'Error! The Password field was left blank.'
+  userid_char_alert: 'Error! The UserID is over the 10 character limit.'
+  pw_char_alert: 'Error! The Password is over the 15 character limit.'
+  input_field_blank_alert: 'The required fields were left blank.'
+  redeem_alert: 'Error! The Redeem Code is invalid.'
+
+
+stage:
+  <<: *qa
+
+  domain: 'http://www.stage.project_site/login.html'
+  admin: 'http://admin.stage.project_site/login.html'
+
+
+prod:
+  <<: *qa
+
+  domain: 'http://www.project_site/login.html'
+  admin: 'http://admin.prod.project_site/login.html'
