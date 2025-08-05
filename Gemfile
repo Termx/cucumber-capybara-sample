@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '2.6.3'
+ruby '3.3.9'
 
 gem 'capybara'
 gem 'cucumber'
