@@ -1,1 +1,1 @@
-Demo template using Cucumber BDD with Ruby.
+Demo template using Selenium with Cucumber BDD & RSpec.
