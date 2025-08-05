@@ -31,7 +31,7 @@ end
 
 When(/^I enter a new First and Last Name in the name fields$/) do
   fill_in 'first', with: 'John'
-  fill_in 'last', with: 'McCain'
+  fill_in 'last', with: 'Doe'
   click_button 'Submit'
 end
 
