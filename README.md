@@ -1,1 +1,1 @@
-cucumber-capybara-sample
+Demo template using Cucumber BDD with Ruby.
