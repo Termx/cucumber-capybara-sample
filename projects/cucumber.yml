@@ -1,0 +1,7 @@
+#<% base_dir = File.expand_path(File.dirname(__FILE__) + '') %>
+
+base_values: "--color --format pretty --expand -r support -r step_definitions -r features/support -r features/step_definitions -r projects/page_object"
+html: "--format html --out test-reports/cucumber-report.html"
+
+default: "${base_values} ${html} -t 'not @wip'"
+sanity: "${base_values} -t @sanity"

@@ -1,8 +1,8 @@
-require File.expand_path(File.dirname(__FILE__) + '/../../../../../support/env.rb')
+require File.expand_path(File.dirname(__FILE__) + '/../../support/env.rb')
 require 'yaml'
 
 # method is the name to call strings from the config.yml
-def project_website
+def project
   config = load_env_config
 end
 

@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
-ruby '3.3.9'
+ruby '3.4.6'
 
 gem 'capybara'
 gem 'cucumber'
-gem 'gherkin'
+gem 'cucumber-gherkin'
 gem 'json'
 gem 'require_all'
 gem 'rspec'

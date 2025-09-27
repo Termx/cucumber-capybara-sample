@@ -5,6 +5,9 @@ require 'rspec'
 require 'rubocop'
 require 'selenium-webdriver'
 
+require_all 'page_object'
+# require_all File.expand_path('../../page_object', __FILE__)
+
 ### driver setup ###
 Capybara.register_driver :chrome do |app|
   options = Selenium::WebDriver::Chrome::Options.new
@@ -48,9 +51,9 @@ After do |scenario|
   end
 end
 
-def add_screeshot
+def add_screenshot
   file_name = 'screenshot.png'
-  file_path = "report/#{file_name}"
+  file_path = "test-reports/#{file_name}"
   page.driver.browser.save_screenshot(file_path)
   image = open(file_path, 'rb', &:read)
   encoded_image = Base64.encode64(image)
@@ -59,7 +62,7 @@ end
 
 def load_env_config()
   config_path  = FileUtils.pwd + '/config.yml'
-  config       = YAML::load(File.read(config_path))
+  config       = YAML.safe_load(File.read(config_path), aliases: true)
   default_env  = ENV['QA_ENV'] || 'qa'
   return config[default_env]
 end
@@ -70,7 +73,7 @@ def subdomain
 end
 
 def domain
-  load_env_config['domain']
+  load_env_config['base_url']
 end
 
 def localized_domain

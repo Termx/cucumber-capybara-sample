@@ -1,0 +1,23 @@
+qa: &qa
+
+  base_url: 'https://practicesoftwaretesting.com/'
+
+###########
+#Login info
+###########
+
+  user_email: 'customer@practicesoftwaretesting.com'
+  user_pw: 'welcome01'
+  invalid_email: 'fakeme@google.com'
+  invalid_pw: '123456789'
+
+stage:
+  <<: *qa
+
+  base_url: 'https://practicesoftwaretesting.com/'
+
+
+prod:
+  <<: *qa
+
+  base_url: 'https://practicesoftwaretesting.com/'
