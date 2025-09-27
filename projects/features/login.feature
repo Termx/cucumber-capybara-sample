@@ -1,5 +1,5 @@
 Feature: Login
-  Verify login features against valid and invalid credentials.
+  Verify login features against valid and invalid credentials
 
 Background: Proceed to the Login page
   Given I navigate to the login page

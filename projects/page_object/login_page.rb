@@ -2,6 +2,11 @@ class LoginPage
   include Capybara::DSL
   include RSpec::Matchers
 
+  def load_login_page
+    visit domain
+    find('a[data-test="nav-sign-in"]', wait: 3).click
+  end
+
   def invalid_credentials_message
     expect(page).to have_css('div[data-test="login-error"]', text: 'Invalid email or password')
   end

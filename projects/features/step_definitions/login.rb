@@ -4,8 +4,10 @@
 #########
 
 Given(/^I navigate to the login page$/) do
-  visit domain
-  find('a[data-test="nav-sign-in"]', wait: 3).click
+  # visit domain
+  # find('a[data-test="nav-sign-in"]', wait: 3).click
+  @login_page = LoginPage.new
+  @login_page.load_login_page
 end
 
 #########
