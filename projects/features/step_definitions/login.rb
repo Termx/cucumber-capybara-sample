@@ -36,6 +36,24 @@ When(/^I enter credentials without a password$/) do
   click_button 'Login'
 end
 
+When(/^I request a password reset$/) do
+  click_link 'Forgot your Password?'
+  fill_in 'email', with: project['user_email']
+  click_button 'Set New Password'
+end
+
+When(/^I request a password reset with an invalid email$/) do
+  click_link 'Forgot your Password?'
+  fill_in 'email', with: project['invalid_email']
+  click_button 'Set New Password'
+end
+
+When(/^I request a password reset without an email address$/) do
+  click_link 'Forgot your Password?'
+  fill_in 'email', with: ''
+  click_button 'Set New Password'
+end
+
 #########
 # THEN
 #########
@@ -58,4 +76,18 @@ end
 Then(/^I should see the password error message$/) do
   @login_page = LoginPage.new
   @login_page.password_error_message
+end
+
+Then(/^I should see a password reset confirmation message$/) do
+  @login_page = LoginPage.new
+  @login_page.password_reset_confirmation_message
+end
+
+Then(/^I should see password reset field display an invalid error message$/) do
+  @login_page = LoginPage.new
+  @login_page.password_reset_invalid_email_password_reset_message
+end
+
+Then(/^I should see password reset field display an error message$/) do
+  expect(page).to have_css('div[id="email-error"]', text: 'Email is required')
 end

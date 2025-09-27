@@ -19,3 +19,15 @@ Background: Proceed to the Login page
   Scenario: Able to see an error message when a password is not provided
     When I enter credentials without a password
     Then I should see the password error message
+
+  Scenario: Able to request a password reset
+    When I request a password reset
+    Then I should see a password reset confirmation message
+  
+  Scenario: Unable to request a password reset with an invalid email
+    When I request a password reset with an invalid email
+    Then I should see password reset field display an invalid error message
+  
+  Scenario: Unable to request a password reset without an email address
+    When I request a password reset without an email address
+    Then I should see password reset field display an error message
