@@ -4,8 +4,6 @@
 #########
 
 Given(/^I navigate to the login page$/) do
-  # visit domain
-  # find('a[data-test="nav-sign-in"]', wait: 3).click
   @login_page = LoginPage.new
   @login_page.load_login_page
 end
@@ -17,7 +15,6 @@ When(/^I enter valid credentials$/) do
   fill_in 'email', with: project['user_email']
   fill_in 'password', with: project['user_pw']
   click_button 'Login'
-  # page.locator('[data-test="login-submit"]').click()
 end
 
 When(/^I enter invalid credentials$/) do
