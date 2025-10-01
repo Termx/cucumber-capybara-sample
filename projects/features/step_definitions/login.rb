@@ -11,6 +11,7 @@ end
 #########
 # WHEN
 #########
+
 When(/^I enter valid credentials$/) do
   fill_in 'email', with: project['user_email']
   fill_in 'password', with: project['user_pw']
