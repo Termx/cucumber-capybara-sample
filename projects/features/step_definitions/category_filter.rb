@@ -25,5 +25,5 @@ end
 
 Then(/^I should see products displayed that are under the Hammer category$/) do
   @category_filter_page.CategoryFilterPage.new
-  @category_filter_page.check_hammer_category
+  @category_filter_page.verify_hammer_category_count
 end

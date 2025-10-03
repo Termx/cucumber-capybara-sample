@@ -9,7 +9,7 @@ class CategoryFilterPage
     uncheck('Hammer')
   end
 
-  def check_hammer_category
+  def verify_hammer_category_count
     within('div[data-test="filter_completed"]') do
       expect(page).to have_css('a.card', count: 7)
     end
