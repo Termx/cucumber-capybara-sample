@@ -31,12 +31,6 @@ When(/^I enter the account details without a last name$/) do
   @create_account_page.click_register_button
 end
 
-When(/^I enter the account details without a date of birth$/) do
-  @create_account_page = CreateAccountPage.new
-  fill_in 'dob', with: ''
-  @create_account_page.click_register_button
-end
-
 When(/^I enter the account details without a DOB$/) do
   @create_account_page = CreateAccountPage.new
   fill_in 'dob', with: ''
@@ -92,15 +86,15 @@ When(/^I enter the account details without an email address$/) do
   @create_account_page.click_register_button
 end
 
-When(/^I enter the account details without a password$/) do
-  @create_account_page = CreateAccountPage.new
-  fill_in 'password', with: ''
-  @create_account_page.click_register_button
-end
-
 When(/^I enter the account details with a password less than 6 characters$/) do
   @create_account_page = CreateAccountPage.new
   fill_in 'password', with: 'P@ss1'
+  @create_account_page.click_register_button
+end
+
+When(/^I enter the account details without a password$/) do
+  @create_account_page = CreateAccountPage.new
+  fill_in 'password', with: ''
   @create_account_page.click_register_button
 end
 
