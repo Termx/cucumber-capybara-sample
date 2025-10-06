@@ -1,4 +1,4 @@
-Demo template using Selenium with Cucumber BDD & RSpec.
+Basic template using Selenium webdriver with Cucumber BDD, Capybara, & RSpec with Page Object Model.
 
 Prerequisites:
 - Ruby 3.4.6
