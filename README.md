@@ -29,18 +29,8 @@ bundle exec cucumber features/<name>.feature:<line>
 ```
 Using bundle exec ensures the tests use the same gem versions defined for the project.
 
+Notes:
 
-Run all tests from root folder:
-``` Ruby
-cucumber features/
-```
+Capybara is a Ruby library that simulates how real users interact with your web app (clicking links, filling in forms, etc.). It supports multiple drivers such as Selenium by default, and lets you switch between headless and headed runs as needed.
 
-Run a specific feature file:
-``` Ruby
-cucumber features/xxxx.feature
-```
-
-Run a specific scenario by line number:
-``` Ruby
-cucumber features/xxxx.feature:xx (xx is line number)
-```
+Cucumber reads .feature files written in Gherkin and connects them to Ruby step definitions — this is the BDD flow that drives your acceptance tests.
