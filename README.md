@@ -1,19 +1,34 @@
-Basic template using Selenium webdriver with Cucumber BDD, Capybara, & RSpec with Page Object Model.
+This project uses Ruby, Bundler, Cucumber, Capybara, and RSpec for behavior-driven tests with a page-object style.
 
 Prerequisites:
-- Ruby 3.4.6
-- RSPec
-- Cucumber
+- Ruby (3.0+ recommended)
+- Bundler
 
 Install dependencies:
-``` Ruby
+```bash
+# Install Bundler if you don’t have it already
 gem install bundler
-```
 
-Run bundle to install dependencies:
-``` Ruby
+# Install all project dependencies from the Gemfile
 bundle install
 ```
+Bundler will install Cucumber, Capybara, RSpec, and any other gems defined in the Gemfile.
+
+Running Tests:
+
+You can run your feature tests using Cucumber:
+```bash
+# Runs all feature tests
+bundle exec cucumber features/
+
+# Runs a specific feature file
+bundle exec cucumber features/<name>.feature
+
+# Runs a specific scenario at a given line number
+bundle exec cucumber features/<name>.feature:<line>
+```
+Using bundle exec ensures the tests use the same gem versions defined for the project.
+
 
 Run all tests from root folder:
 ``` Ruby
