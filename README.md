@@ -31,6 +31,6 @@ Using bundle exec ensures the tests use the same gem versions defined for the pr
 
 Notes:
 
-Capybara is a Ruby library that simulates how real users interact with your web app (clicking links, filling in forms, etc.). It supports multiple drivers such as Selenium by default, and lets you switch between headless and headed runs as needed.
+- Capybara is a Ruby library that simulates how real users interact with your web app (clicking links, filling in forms, etc.). It supports multiple drivers such as Selenium by default, and lets you switch between headless and headed runs as needed.
 
-Cucumber reads .feature files written in Gherkin and connects them to Ruby step definitions — this is the BDD flow that drives your acceptance tests.
+- Cucumber reads .feature files written in Gherkin and connects them to Ruby step definitions — this is the BDD flow that drives your acceptance tests.
