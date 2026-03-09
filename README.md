@@ -30,7 +30,6 @@ cucumber features/<name>.feature
 cd projects
 cucumber features/<name>.feature:<line>
 ```
-Using bundle exec ensures the tests use the same gem versions defined for the project.
 
 Notes:
 
