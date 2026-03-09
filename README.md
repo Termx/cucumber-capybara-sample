@@ -1,7 +1,7 @@
 This project uses Ruby, Bundler, Cucumber, Capybara, and RSpec for behavior-driven tests with a page-object style.
 
 Prerequisites:
-- Ruby (3.0+ recommended)
+- Ruby (4.0+ recommended)
 - Bundler
 
 Install dependencies:
