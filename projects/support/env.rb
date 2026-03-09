@@ -4,14 +4,14 @@ require 'require_all'
 require 'rspec'
 require 'selenium-webdriver'
 
-require_all 'page_object'
-# require_all File.expand_path('../../page_object', __FILE__)
+require_all File.expand_path('../../page_object', __FILE__)
 
 ### driver setup ###
 Capybara.register_driver :chrome do |app|
   options = Selenium::WebDriver::Chrome::Options.new
   options.add_argument('--window-size=1920,1440')
   options.add_argument('--ignore-certificate-errors')
+  options.add_argument('--headless=new')
 
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end

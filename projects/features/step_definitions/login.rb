@@ -64,30 +64,25 @@ Then(/^I should be redirected to the account page$/) do
 end
 
 Then(/^I should see an error message$/) do
-  @login_page = LoginPage.new
   @login_page.invalid_credentials_message
 end
 
 Then(/^I should see the email error message$/) do
-  @login_page = LoginPage.new
   @login_page.email_error_message
 end
 
 Then(/^I should see the password error message$/) do
-  @login_page = LoginPage.new
   @login_page.password_error_message
 end
 
 Then(/^I should see a password reset confirmation message$/) do
-  @login_page = LoginPage.new
   @login_page.password_reset_confirmation_message
 end
 
 Then(/^I should see password reset field display an invalid error message$/) do
-  @login_page = LoginPage.new
   @login_page.password_reset_invalid_email_password_reset_message
 end
 
 Then(/^I should see password reset field display an error message$/) do
-  expect(page).to have_css('div[id="email-error"]', text: 'Email is required')
+  @login_page.email_error_message
 end
