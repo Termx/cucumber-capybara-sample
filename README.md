@@ -19,12 +19,15 @@ Running Tests:
 You can run your feature tests using Cucumber:
 ```bash
 # Runs all feature tests
+cd projects
 cucumber projects/features/
 
 # Runs a specific feature file
+cd projects
 cucumber projects/features/<name>.feature
 
 # Runs a specific scenario at a given line number
+cd projects
 cucumber projectsfeatures/<name>.feature:<line>
 ```
 Using bundle exec ensures the tests use the same gem versions defined for the project.
