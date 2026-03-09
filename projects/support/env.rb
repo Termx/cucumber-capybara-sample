@@ -2,7 +2,6 @@ require 'capybara'
 require 'capybara/cucumber'
 require 'require_all'
 require 'rspec'
-require 'rubocop'
 require 'selenium-webdriver'
 
 require_all 'page_object'
@@ -55,7 +54,8 @@ def add_screenshot
   file_name = 'screenshot.png'
   file_path = "test-reports/#{file_name}"
   page.driver.browser.save_screenshot(file_path)
-  image = open(file_path, 'rb', &:read)
+  require 'base64'
+  image = File.open(file_path, 'rb', &:read)
   encoded_image = Base64.encode64(image)
   embed(encoded_image, 'image/png;base64', 'SCREENSHOT')
 end
